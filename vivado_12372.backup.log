@@ -1,0 +1,99 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Jun  8 09:56:39 2025
+# Process ID         : 12372
+# Current directory  : C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project K 2/Uart-Loader
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent7116 C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.xpr
+# Log file           : C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project K 2/Uart-Loader/vivado.log
+# Journal file       : C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project K 2/Uart-Loader\vivado.jou
+# Running On         : DESKTOP-L7H0P7L
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz
+# CPU Frequency      : 1992 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 17023 MB
+# Swap memory        : 2550 MB
+# Total Virtual      : 19574 MB
+# Available Virtual  : 12412 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project K 2/Uart-Loader/Uart-Loader.xpr}
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project K 2/Uart-Loader/Uart-Loader.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1150.637 ; gain = 71.906
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+launch_simulation
+ERROR: [Common 17-1293] The path 'C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project K 2/Uart-Loader/Uart-Loader.cache/wt' already exists, is a directory, but is not writable.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\baudrate_hz.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project K 2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+ERROR: [Common 17-1293] The path 'C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project K 2/Uart-Loader/Uart-Loader.cache/wt' already exists, is a directory, but is not writable.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun  8 11:58:59 2025...
