@@ -3,12 +3,12 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Tue Jun 10 11:08:53 2025
-# Process ID         : 2792
-# Current directory  : C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project Ky 2/Uart-Loader
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent7632 C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project Ky 2\Uart-Loader\Uart-Loader.xpr
-# Log file           : C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project Ky 2/Uart-Loader/vivado.log
-# Journal file       : C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project Ky 2/Uart-Loader\vivado.jou
+# Start of session at: Tue Jun 10 20:32:44 2025
+# Process ID         : 10064
+# Current directory  : C:/Project_Ky2/Uart-Loader
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent11400 C:\Project_Ky2\Uart-Loader\Uart-Loader.xpr
+# Log file           : C:/Project_Ky2/Uart-Loader/vivado.log
+# Journal file       : C:/Project_Ky2/Uart-Loader\vivado.jou
 # Running On         : DESKTOP-L7H0P7L
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 22631
@@ -19,19 +19,318 @@
 # Host memory        : 17023 MB
 # Swap memory        : 2550 MB
 # Total Virtual      : 19574 MB
-# Available Virtual  : 11187 MB
+# Available Virtual  : 7796 MB
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project Ky 2/Uart-Loader/Uart-Loader.xpr}
-INFO: [Project 1-313] Project file moved from 'C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project K 2/Uart-Loader' since last save.
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project Ky 2/Uart-Loader/Uart-Loader.gen/sources_1'.
+open_project C:/Project_Ky2/Uart-Loader/Uart-Loader.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Project_Ky2/Uart-Loader/Uart-Loader.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
-open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1120.344 ; gain = 47.012
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+===== BẮT ĐẦU MÔ PHỎNG =====
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1172.000 ; gain = 9.445
 update_compile_order -fileset sources_1
-git init
-WARNING: [Common 17-259] Unknown Tcl command 'git init' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
-Initialized empty Git repository in C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project Ky 2/Uart-Loader/.git/
+run all
+>> Gửi byte: 41 (A)
+>> Gửi xong byte: 41 (A)
+>> Gửi byte: 42 (B)
+>> Gửi xong byte: 42 (B)
+>> Gửi byte: 43 (C)
+>> Gửi xong byte: 43 (C)
+
+===== KIỂM TRA DỮ LIỆU TRONG ROM =====
+Lỗi: ROM[          0] không đúng! Nhận: xx, Mong đợi: 41
+Lỗi: ROM[          1] không đúng! Nhận: xx, Mong đợi: 42
+Lỗi: ROM[          2] không đúng! Nhận: xx, Mong đợi: 43
+
+===== KẾT THÚC MÔ PHỎNG =====
+$stop called at time : 60700 ns : File "C:/Project_Ky2/Uart-Loader/Uart-Loader.srcs/sim_1/new/tb.v" Line 102
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Project_Ky2/Uart-Loader/Uart-Loader.srcs/sources_1/new/uart_fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Project_Ky2/Uart-Loader/Uart-Loader.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.uart_fsm
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+===== BẮT ĐẦU MÔ PHỎNG =====
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 2230.852 ; gain = 0.000
+run all
+>> Gửi byte: 41 (A)
+>> Gửi xong byte: 41 (A)
+>> Gửi byte: 42 (B)
+>> Gửi xong byte: 42 (B)
+>> Gửi byte: 43 (C)
+>> Gửi xong byte: 43 (C)
+
+===== KIỂM TRA DỮ LIỆU TRONG ROM =====
+Lỗi: ROM[          0] không đúng! Nhận: xx, Mong đợi: 41
+Lỗi: ROM[          1] không đúng! Nhận: xx, Mong đợi: 42
+Lỗi: ROM[          2] không đúng! Nhận: xx, Mong đợi: 43
+
+===== KẾT THÚC MÔ PHỎNG =====
+$stop called at time : 60700 ns : File "C:/Project_Ky2/Uart-Loader/Uart-Loader.srcs/sim_1/new/tb.v" Line 102
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Project_Ky2/Uart-Loader/Uart-Loader.srcs/sources_1/new/uart_fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Project_Ky2/Uart-Loader/Uart-Loader.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.uart_fsm
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+===== BẮT ĐẦU MÔ PHỎNG =====
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2230.852 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sim_1\new\tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Project_Ky2\Uart-Loader\Uart-Loader.srcs\sources_1\new\uart_fsm.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Project_Ky2/Uart-Loader/Uart-Loader.srcs/sources_1/new/uart_fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Project_Ky2/Uart-Loader/Uart-Loader.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.uart_fsm
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Project_Ky2/Uart-Loader/Uart-Loader.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+===== BẮT ĐẦU MÔ PHỎNG =====
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2230.852 ; gain = 0.000
+run all
+>> Gửi byte: 41 (A)
+>> Gửi xong byte: 41 (A)
+>> Gửi byte: 42 (B)
+>> Gửi xong byte: 42 (B)
+>> Gửi byte: 43 (C)
+>> Gửi xong byte: 43 (C)
+
+===== KIỂM TRA DỮ LIỆU TRONG ROM =====
+ROM[          0] đúng! (A)
+ROM[          1] đúng! (B)
+ROM[          2] đúng! (C)
+
+===== KẾT THÚC MÔ PHỎNG =====
+$stop called at time : 60700 ns : File "C:/Project_Ky2/Uart-Loader/Uart-Loader.srcs/sim_1/new/tb.v" Line 108
+run all

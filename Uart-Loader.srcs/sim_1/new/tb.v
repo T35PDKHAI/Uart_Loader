@@ -18,49 +18,94 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+// Testbench cho UART FSM
+// Mô phỏng quá trình truyền dữ liệu UART và kiểm tra dữ liệu lưu trữ trong ROM
+//////////////////////////////////////////////////////////////////////////////////
 
-`define PERIOD 4340
+`define PERIOD 10   
+
 module tb;
     reg clk_115200 = 0;
     reg rst = 1;
     reg rx = 1;
+    reg [7:0] addr = 0;
+    wire [7:0] addr_byte;
+    wire [7:0] shift_reg;
+    wire [1:0] state;
+    wire [7:0] rom_addr;
     
-    uart_fsm DUT(clk_115200, rst, rx);
-    
-    always #(`PERIOD) clk_115200 =~ clk_115200;
-    
-    task sen_uart_byte;
+    integer j;
+    reg [7:0] expected_values [0:2]; // Mảng chứa giá trị mong đợi
+
+    // Kết nối module DUT (Device Under Test)
+    uart_fsm DUT (
+        .clk_115200(clk_115200),
+        .rst(rst),
+        .rx(rx),
+        .addr(addr),
+        .addr_byte(addr_byte),
+        .shift_reg(shift_reg),
+        .state(state),
+        .rom_addr(rom_addr)
+    );
+
+    // Tạo xung clock ~115200Hz
+    always #(`PERIOD/2) clk_115200 = ~clk_115200;
+
+    // Task gửi UART 1 byte (8N1)
+    task send_uart_byte;
         input [7:0] data;
         integer i;
         begin
-            rx <= 0;
-            #(`PERIOD*2);
-            for (i = 0; i < 8; i = i + 1)
-            begin
-                rx <= data[i];
-                #(`PERIOD*2);
+            $display(">> Gửi byte: %h (%c)", data, data);
+            rx <= 0; // Start bit
+            #(`PERIOD);
+
+            for (i = 0; i < 8; i = i + 1) begin
+                rx <= data[i]; // Gửi từng bit
+                #(`PERIOD);
             end
-            
-            rx <= 1;
-            #(`PERIOD*2);
+
+            rx <= 1; // Stop bit
+            #(`PERIOD);
+            $display(">> Gửi xong byte: %h (%c)", data, data);
         end
     endtask
-    
+
     initial begin
+        // Thiết lập giá trị mong đợi
+        expected_values[0] = 8'h41; // 'A'
+        expected_values[1] = 8'h42; // 'B'
+        expected_values[2] = 8'h43; // 'C'
+
+        $display("\n===== BẮT ĐẦU MÔ PHỎNG =====");
+
         #100;
         rst = 0;
-        
         #10000;
-        
-        send_uart_byte(8'h41);
-        send_uart_byte(8'h42);
-        send_uart_byte(8'h43);
-        
+
+        // Gửi 3 ký tự: A, B, C
+        send_uart_byte(8'h41); // 'A'
+        send_uart_byte(8'h42); // 'B'
+        send_uart_byte(8'h43); // 'C'
+
+        // Chờ để FSM xử lý xong
         #50000;
-        
-        $writememh("rom_output.hex", DUT.rom);
-        $display("Simulation complete. Check rom_output.hex");
+
+        // Kiểm tra dữ liệu trong ROM
+        $display("\n===== KIỂM TRA DỮ LIỆU TRONG ROM =====");
+        for (j = 0; j < 3; j = j + 1) begin
+            addr = j;
+            #100;
+            if (addr_byte !== expected_values[j]) begin
+                $display("Lỗi: ROM[%d] không đúng! Nhận: %h, Mong đợi: %h", j, addr_byte, expected_values[j]);
+            end else begin
+                $display("ROM[%d] đúng! (%c)", j, addr_byte);
+            end
+        end
+        $display("\n===== KẾT THÚC MÔ PHỎNG =====");
         $stop;
-    end  
-    
+    end
 endmodule
+

@@ -3,12 +3,12 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Tue Jun 10 11:08:53 2025
-# Process ID         : 2792
-# Current directory  : C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project Ky 2/Uart-Loader
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent7632 C:\Users\user\OneDrive - ptit.edu.vn\Desktop\Project Ky 2\Uart-Loader\Uart-Loader.xpr
-# Log file           : C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project Ky 2/Uart-Loader/vivado.log
-# Journal file       : C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project Ky 2/Uart-Loader\vivado.jou
+# Start of session at: Tue Jun 10 20:32:44 2025
+# Process ID         : 10064
+# Current directory  : C:/Project_Ky2/Uart-Loader
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent11400 C:\Project_Ky2\Uart-Loader\Uart-Loader.xpr
+# Log file           : C:/Project_Ky2/Uart-Loader/vivado.log
+# Journal file       : C:/Project_Ky2/Uart-Loader\vivado.jou
 # Running On         : DESKTOP-L7H0P7L
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 22631
@@ -19,9 +19,23 @@
 # Host memory        : 17023 MB
 # Swap memory        : 2550 MB
 # Total Virtual      : 19574 MB
-# Available Virtual  : 11187 MB
+# Available Virtual  : 7796 MB
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/user/OneDrive - ptit.edu.vn/Desktop/Project Ky 2/Uart-Loader/Uart-Loader.xpr}
+open_project C:/Project_Ky2/Uart-Loader/Uart-Loader.xpr
+launch_simulation
+source tb.tcl
 update_compile_order -fileset sources_1
-git init
+run all
+close_sim
+launch_simulation
+source tb.tcl
+run all
+close_sim
+launch_simulation
+source tb.tcl
+close_sim
+launch_simulation
+source tb.tcl
+run all
+run all
