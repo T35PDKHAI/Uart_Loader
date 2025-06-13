@@ -58,7 +58,7 @@ module tb;
         input [7:0] data;
         integer i;
         begin
-            $display(">> Gửi byte: %h (%c)", data, data);
+            $display(">> Send byte: %h (%c)", data, data);
             rx <= 0; // Start bit
             #(`PERIOD);
 
@@ -69,7 +69,7 @@ module tb;
 
             rx <= 1; // Stop bit
             #(`PERIOD);
-            $display(">> Gửi xong byte: %h (%c)", data, data);
+            $display(">> Byte send: %h (%c)", data, data);
         end
     endtask
 
@@ -79,7 +79,7 @@ module tb;
         expected_values[1] = 8'h42; // 'B'
         expected_values[2] = 8'h43; // 'C'
 
-        $display("\n===== BẮT ĐẦU MÔ PHỎNG =====");
+        $display("\n===== START SIMULATION =====");
 
         #100;
         rst = 0;
@@ -94,17 +94,17 @@ module tb;
         #50000;
 
         // Kiểm tra dữ liệu trong ROM
-        $display("\n===== KIỂM TRA DỮ LIỆU TRONG ROM =====");
+        $display("\n===== Check data in ROM =====");
         for (j = 0; j < 3; j = j + 1) begin
             addr = j;
             #100;
             if (addr_byte !== expected_values[j]) begin
-                $display("Lỗi: ROM[%d] không đúng! Nhận: %h, Mong đợi: %h", j, addr_byte, expected_values[j]);
+                $display("Error: ROM[%d] false! Receive: %h, expect: %h", j, addr_byte, expected_values[j]);
             end else begin
-                $display("ROM[%d] đúng! (%c)", j, addr_byte);
+                $display("ROM[%d] true! (%c)", j, addr_byte);
             end
         end
-        $display("\n===== KẾT THÚC MÔ PHỎNG =====");
+        $display("\n===== FINISH SIMULATION =====");
         $stop;
     end
 endmodule

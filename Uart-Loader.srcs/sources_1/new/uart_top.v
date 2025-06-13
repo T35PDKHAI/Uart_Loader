@@ -23,10 +23,11 @@
 module uart_top(
     input clk_100MHz,
     input rst,
-    input rx
+    input rx,
+    output [7:0] led
     );
     
-    wire clk_115200;
+    wire clk_115200;    
     
     baudrate_hz uart_baud(
         .clk_100MHz(clk_100MHz),
@@ -37,7 +38,13 @@ module uart_top(
     uart_fsm u_fsm(
         .clk_115200(clk_115200),
         .rst(rst),
-        .rx(rx)
+        .rx(rx),
+        .addr(addr),
+        .addr_byte(addr_byte),
+        .shift_reg(led),
+        .state(state),
+        .rom_addr(rom_addr)
     );
+    
     
 endmodule
